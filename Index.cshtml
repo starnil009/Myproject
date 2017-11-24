@@ -1,0 +1,71 @@
+<html ng-app="UrbanTrend">
+<head>
+    <title>UrbanTrend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <!--Carousel-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Required for angular-material-->
+    <link href="~/bower_components/angular-material/angular-material.scss/angular-material.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <base href="/" />
+
+</head>
+<body>
+    <div class="container">
+        <h1>&#10087 UrbanTrend &#10087</h1>
+        <div>
+            <ul>
+                <li><a href="/signup">SignUp</a></li>
+                <li><a href="/login"ng-show="!account.isLoggedIn"()>Login</a></li>
+               <li> <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">Logout</a></li>
+                <li ng-show="account.isLoggedIn()">
+                    [{{account.getUserName()}}]
+                    <li><a href="/order">Order</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li class="menu">
+                        <a href="javascript:void(0)" class="menubtn">Menu</a>
+                        <div class="menu-content">
+                            <a href="/appetizers">Appetizers</a>
+                            <a href="/soups">Soups</a>
+                            <a href="/salads">Salads</a>
+                            <a href="/entrees">Entrees</a>
+                            <a href="/beverages">Beverages</a>
+                            <a href="/desserts">Desserts</a>
+                        </div>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/">Home</a></li>
+</ul>
+
+        </div>
+    </div>
+    
+
+    <ui-view></ui-view>
+
+
+
+    <!-- Library Files -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Required for angular-material -->
+    <script src="~/bower_components/angular-material/angular-material.js"></script>
+    <script src="~/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="~/bower_components/angular-aria/angular-aria.js"></script>
+    <script src="~/bower_components/angular-messages/angular-messages.js"></script>
+
+    <!-- App Files-->
+    <script src="/ngapp/app.js"></script>
+    <script src="/ngapp/controllers/controllers.js"></script>
+    <script src="/ngapp/services/services.js"></script>
+</body>
+</html>
